@@ -447,27 +447,29 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 // === Song Data ===
 const coverClasses = {dj:'cover-dj',pop:'cover-pop',emotional:'cover-emo',ai:'cover-ai',cute:'cover-cute',traditional:'cover-trad'};
 
+const R2_BASE = 'https://pub-a6fb0a3ecc094a51a5555ca46fada2da.r2.dev';
 const songs = [
-  {id:1,name:"午夜DJ",artist:"萌宠音坊",category:"dj",tags:["DJ","电音","嗨曲"],duration:"4:32",plays:128500,emoji:"🌃"},
-  {id:2,name:"没有钱你会爱我吗",artist:"萌宠音坊",category:"dj",tags:["DJ","现实","洗脑"],duration:"3:58",plays:256800,emoji:"💰"},
-  {id:3,name:"伤不起",artist:"萌宠音坊",category:"emotional",tags:["伤感","女声","电音"],duration:"4:15",plays:198200,emoji:"💔"},
-  {id:4,name:"红尘情歌",artist:"萌宠音坊",category:"emotional",tags:["古风","情歌","对唱"],duration:"4:02",plays:312600,emoji:"❤️"},
-  {id:5,name:"想你的夜",artist:"萌宠音坊",category:"emotional",tags:["思念","深夜","抒情"],duration:"3:45",plays:167400,emoji:"🌙"},
-  {id:6,name:"萌宠乐园",artist:"AI创作",category:"cute",tags:["萌宠","可爱","BGM"],duration:"3:20",plays:89300,emoji:"🐱"},
-  {id:7,name:"醉在DJ里",artist:"萌宠音坊",category:"dj",tags:["DJ","派对","炸裂"],duration:"4:48",plays:145600,emoji:"🎉"},
-  {id:8,name:"小苹果嗨起来",artist:"萌宠音坊",category:"pop",tags:["洗脑","欢快","全民"],duration:"3:35",plays:423100,emoji:"🍎"},
-  {id:9,name:"寂寞沙洲",artist:"萌宠音坊",category:"emotional",tags:["寂寞","漂泊","氛围"],duration:"4:22",plays:134500,emoji:"🏝️"},
-  {id:10,name:"爱情买卖",artist:"萌宠音坊",category:"dj",tags:["DJ","犀利","舞曲"],duration:"3:55",plays:287900,emoji:"💕"},
-  {id:11,name:"增广贤文说",artist:"AI创作",category:"traditional",tags:["传统文化","国学","说唱"],duration:"4:10",plays:76500,emoji:"📜"},
-  {id:12,name:"AI梦境曲",artist:"AI创作",category:"ai",tags:["AI","电子","梦幻"],duration:"5:01",plays:65200,emoji:"🤖"},
-  {id:13,name:"伤心的站台",artist:"萌宠音坊",category:"emotional",tags:["离别","站台","伤感"],duration:"4:18",plays:178300,emoji:"🚉"},
-  {id:14,name:"招财进宝",artist:"AI创作",category:"traditional",tags:["财神","喜庆","传统"],duration:"3:42",plays:234100,emoji:"🧧"},
-  {id:15,name:"萌宠进行曲",artist:"AI创作",category:"cute",tags:["萌宠","进行曲","搞笑"],duration:"3:15",plays:112700,emoji:"🐶"},
-  {id:16,name:"商业风云",artist:"萌宠音坊",category:"pop",tags:["商业","大气","励志"],duration:"4:30",plays:98600,emoji:"📈"},
-  {id:17,name:"月下思",artist:"萌宠音坊",category:"traditional",tags:["古风","思念","唯美"],duration:"4:55",plays:87400,emoji:"🌕"},
-  {id:18,name:"电音萌宠",artist:"AI创作",category:"ai",tags:["AI","电音","萌宠"],duration:"3:28",plays:54800,emoji:"🎧"},
-  {id:19,name:"心动信号",artist:"萌宠音坊",category:"pop",tags:["甜蜜","恋爱","轻快"],duration:"3:50",plays:201500,emoji:"💓"},
-  {id:20,name:"午夜摇篮曲",artist:"AI创作",category:"cute",tags:["萌宠","摇篮曲","治愈"],duration:"4:05",plays:73200,emoji:"🌟"}
+  {id:1,name:"电子夜曲",artist:"萌宠音坊",category:"dj",tags:["DJ","电音","嗨曲"],duration:"4:32",plays:128500,emoji:"🌃",src:R2_BASE+"/%E7%94%B5%E5%AD%90%E5%A4%9C%E6%9B%B2.mp3"},
+  {id:2,name:"午夜DJ",artist:"萌宠音坊",category:"dj",tags:["DJ","电音","嗨曲"],duration:"4:32",plays:128500,emoji:"🌃"},
+  {id:3,name:"没有钱你会爱我吗",artist:"萌宠音坊",category:"dj",tags:["DJ","现实","洗脑"],duration:"3:58",plays:256800,emoji:"💰"},
+  {id:4,name:"伤不起",artist:"萌宠音坊",category:"emotional",tags:["伤感","女声","电音"],duration:"4:15",plays:198200,emoji:"💔"},
+  {id:5,name:"红尘情歌",artist:"萌宠音坊",category:"emotional",tags:["古风","情歌","对唱"],duration:"4:02",plays:312600,emoji:"❤️"},
+  {id:6,name:"想你的夜",artist:"萌宠音坊",category:"emotional",tags:["思念","深夜","抒情"],duration:"3:45",plays:167400,emoji:"🌙"},
+  {id:7,name:"萌宠乐园",artist:"AI创作",category:"cute",tags:["萌宠","可爱","BGM"],duration:"3:20",plays:89300,emoji:"🐱"},
+  {id:8,name:"醉在DJ里",artist:"萌宠音坊",category:"dj",tags:["DJ","派对","炸裂"],duration:"4:48",plays:145600,emoji:"🎉"},
+  {id:9,name:"小苹果嗨起来",artist:"萌宠音坊",category:"pop",tags:["洗脑","欢快","全民"],duration:"3:35",plays:423100,emoji:"🍎"},
+  {id:10,name:"寂寞沙洲",artist:"萌宠音坊",category:"emotional",tags:["寂寞","漂泊","氛围"],duration:"4:22",plays:134500,emoji:"🏝️"},
+  {id:11,name:"爱情买卖",artist:"萌宠音坊",category:"dj",tags:["DJ","犀利","舞曲"],duration:"3:55",plays:287900,emoji:"💕"},
+  {id:12,name:"增广贤文说",artist:"AI创作",category:"traditional",tags:["传统文化","国学","说唱"],duration:"4:10",plays:76500,emoji:"📜"},
+  {id:13,name:"AI梦境曲",artist:"AI创作",category:"ai",tags:["AI","电子","梦幻"],duration:"5:01",plays:65200,emoji:"🤖"},
+  {id:14,name:"伤心的站台",artist:"萌宠音坊",category:"emotional",tags:["离别","站台","伤感"],duration:"4:18",plays:178300,emoji:"🚉"},
+  {id:15,name:"招财进宝",artist:"AI创作",category:"traditional",tags:["财神","喜庆","传统"],duration:"3:42",plays:234100,emoji:"🧧"},
+  {id:16,name:"萌宠进行曲",artist:"AI创作",category:"cute",tags:["萌宠","进行曲","搞笑"],duration:"3:15",plays:112700,emoji:"🐶"},
+  {id:17,name:"商业风云",artist:"萌宠音坊",category:"pop",tags:["商业","大气","励志"],duration:"4:30",plays:98600,emoji:"📈"},
+  {id:18,name:"月下思",artist:"萌宠音坊",category:"traditional",tags:["古风","思念","唯美"],duration:"4:55",plays:87400,emoji:"🌕"},
+  {id:19,name:"电音萌宠",artist:"AI创作",category:"ai",tags:["AI","电音","萌宠"],duration:"3:28",plays:54800,emoji:"🎧"},
+  {id:20,name:"心动信号",artist:"萌宠音坊",category:"pop",tags:["甜蜜","恋爱","轻快"],duration:"3:50",plays:201500,emoji:"💓"},
+  {id:21,name:"午夜摇篮曲",artist:"AI创作",category:"cute",tags:["萌宠","摇篮曲","治愈"],duration:"4:05",plays:73200,emoji:"🌟"}
 ];
 
 // === State ===
@@ -557,11 +559,15 @@ function selectCat(el, cat) {
 }
 
 // === Playback ===
+let progressInterval;
+let hasRealAudio = false;
+
 function playSong(id) {
   const song = songs.find(s=>s.id===id);
   if (!song) return;
   if (currentSong && currentSong.id===id) { togglePlay(); return; }
   currentSong = song;
+  hasRealAudio = !!song.src;
   currentIndex = filteredSongs.findIndex(s=>s.id===id);
   document.getElementById('playerName').textContent = song.name;
   document.getElementById('playerArtist').textContent = song.artist;
@@ -571,15 +577,36 @@ function playSong(id) {
   recentPlayed.unshift(song);
   if (recentPlayed.length>8) recentPlayed.pop();
   renderRecent();
-  isPlaying = true;
+
+  if (hasRealAudio) {
+    clearInterval(progressInterval);
+    audio.src = song.src;
+    audio.play().catch(()=>{});
+    isPlaying = true;
+  } else {
+    isPlaying = true;
+    simulateProgress(song);
+  }
   document.getElementById('playBtn').innerHTML = '⏸';
   document.getElementById('totalTime').textContent = song.duration;
-  simulateProgress(song);
   renderSongList(filteredSongs);
   document.title = '♫ '+song.name+' - '+song.artist+' | 萌宠音坊';
 }
 
-let progressInterval;
+// Audio event listeners
+audio.addEventListener('timeupdate', function() {
+  if (!hasRealAudio || !audio.duration) return;
+  const pct = (audio.currentTime / audio.duration) * 100;
+  document.getElementById('progressFill').style.width = pct+'%';
+  const m = Math.floor(audio.currentTime/60);
+  const s = Math.floor(audio.currentTime%60);
+  document.getElementById('currentTime').textContent = m+':'+(s<10?'0':'')+s;
+});
+audio.addEventListener('ended', function() {
+  hasRealAudio = false;
+  onSongEnd();
+});
+
 function simulateProgress(song) {
   clearInterval(progressInterval);
   const parts = song.duration.split(':');
@@ -606,7 +633,12 @@ function onSongEnd() {
 
 function togglePlay() {
   if (!currentSong) { if (filteredSongs.length) playSong(filteredSongs[0].id); return; }
-  isPlaying = !isPlaying;
+  if (hasRealAudio) {
+    if (audio.paused) { audio.play(); isPlaying=true; }
+    else { audio.pause(); isPlaying=false; }
+  } else {
+    isPlaying = !isPlaying;
+  }
   document.getElementById('playBtn').innerHTML = isPlaying?'⏸':'▶';
   document.getElementById('playerCover').classList.toggle('spinning',isPlaying);
   renderSongList(filteredSongs);
@@ -642,7 +674,12 @@ function toggleMute() { audio.muted = !audio.muted; }
 
 function seekTo(e) {
   const rect = e.currentTarget.getBoundingClientRect();
-  document.getElementById('progressFill').style.width = ((e.clientX-rect.left)/rect.width*100)+'%';
+  const pct = (e.clientX-rect.left)/rect.width;
+  if (hasRealAudio && audio.duration) {
+    audio.currentTime = pct * audio.duration;
+  } else {
+    document.getElementById('progressFill').style.width = (pct*100)+'%';
+  }
 }
 
 // === Theme ===
