@@ -1,47 +1,112 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>萌宠音坊 - 在线音乐播放器 | 免费听歌 畅享好音乐</title>
-<meta name="description" content="萌宠音坊在线音乐播放器，免费收听海量热门歌曲，DJ舞曲、情感音乐、AI创作音乐尽在萌宠音坊，畅享高品质在线试听体验。">
-<meta name="keywords" content="在线音乐播放器,免费听歌,DJ舞曲,AI音乐,萌宠音坊,在线听歌,音乐网站">
+<title>Suona Vibes - Free Chinese Suona Music Online | Traditional & Modern Suona Player</title>
+<meta name="description" content="Listen to free suona music online. Discover traditional Chinese suona performances, modern suona fusion, cinematic suona covers, and festival celebrations. The ultimate suona music player for world music lovers.">
+<meta name="keywords" content="suona music, Chinese suona, suona instrument, traditional Chinese music, suona online, listen suona free, suona performance, suona cover, modern suona, suona fusion, world music, Chinese traditional instrument, suona player, suona melody, suona concert">
 <meta name="robots" content="index, follow">
-<meta name="author" content="萌宠音坊">
-<meta property="og:title" content="萌宠音坊 - 在线音乐播放器">
-<meta property="og:description" content="免费收听海量热门歌曲，DJ舞曲、情感音乐、AI创作音乐">
+<meta name="author" content="Suona Vibes">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<link rel="canonical" href="https://music-player-novelverse.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Suona Vibes - Free Chinese Suona Music Online">
+<meta property="og:description" content="The ultimate suona music player. Stream traditional & modern suona performances for free. Discover the magic of China's most iconic wind instrument.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://music-player-novelverse.vercel.app/">
+<meta property="og:site_name" content="Suona Vibes">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Suona Vibes - Free Chinese Suona Music Online">
+<meta name="twitter:description" content="Stream traditional & modern suona performances for free. Discover the magic of China's most iconic wind instrument.">
+
+<!-- Structured Data -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"萌宠音坊","applicationCategory":"MusicApplication","operatingSystem":"Web Browser","description":"在线音乐播放器，免费收听海量热门歌曲"}
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Suona Vibes",
+  "url": "https://music-player-novelverse.vercel.app/",
+  "applicationCategory": "MusicApplication",
+  "operatingSystem": "Web Browser",
+  "description": "Free online suona music player featuring traditional Chinese suona performances, modern suona fusion, cinematic covers, and festival celebrations.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "genre": ["Traditional Chinese Music", "World Music", "Suona"],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "World Music Enthusiasts"
+  }
+}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a suona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The suona (唢呐) is a traditional Chinese wind instrument with a history of over 2,000 years. Known for its bright, piercing tone, it is widely used in Chinese folk music, festivals, weddings, and military ceremonies. Often called the Chinese trumpet, the suona can produce both powerful, energetic melodies and delicate, emotive passages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I listen to suona music for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Suona Vibes offers a completely free online suona music player. You can stream traditional and modern suona performances without any registration or subscription required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of suona music are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suona Vibes features six categories: Traditional Suona (classic folk melodies), Modern Suona (contemporary arrangements), Suona Fusion (blending with jazz, electronic, and pop), Cinematic Suona (film score inspired pieces), Festival & Celebration (joyous ceremonial music), and Suona Covers (popular songs reimagined with suona)."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg-primary:#0a1628;
-  --bg-secondary:#111d35;
-  --bg-card:#162040;
-  --bg-hover:#1d2b52;
-  --accent:#ffd700;
-  --accent-dim:#b8960a;
-  --blue:#2563eb;
-  --blue-light:#3b82f6;
-  --pink:#ff6b9d;
-  --text-primary:#f0f0f0;
-  --text-secondary:#8899b4;
-  --text-muted:#556680;
-  --border:#1e3050;
-  --shadow:0 4px 24px rgba(0,0,0,.4);
+  --bg-primary:#1a0a0a;
+  --bg-secondary:#2a1215;
+  --bg-card:#2e181c;
+  --bg-hover:#3d2025;
+  --accent:#d4a843;
+  --accent-dim:#a07e2e;
+  --red:#c0392b;
+  --red-light:#e74c3c;
+  --gold:#ffd700;
+  --text-primary:#f5f0e8;
+  --text-secondary:#b8a090;
+  --text-muted:#7a6558;
+  --border:#4a2a2e;
+  --shadow:0 4px 24px rgba(0,0,0,.5);
 }
 html{scroll-behavior:smooth}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
   background:var(--bg-primary);
   color:var(--text-primary);
   min-height:100vh;
   display:flex;flex-direction:column;
   overflow-x:hidden;
 }
-a{color:var(--blue-light);text-decoration:none}
+a{color:var(--red-light);text-decoration:none}
 a:hover{color:var(--accent)}
 
 /* === Header === */
@@ -58,13 +123,12 @@ a:hover{color:var(--accent)}
 .logo{
   display:flex;align-items:center;gap:10px;
   font-size:22px;font-weight:800;
-  background:linear-gradient(135deg,var(--accent),var(--pink));
+  background:linear-gradient(135deg,var(--gold),var(--red-light));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   white-space:nowrap;
 }
 .logo svg{width:32px;height:32px;flex-shrink:0}
 
-/* Compact nav bar */
 .nav-bar{
   display:flex;align-items:center;gap:8px;flex:1;justify-content:center;
   height:36px;
@@ -79,7 +143,7 @@ a:hover{color:var(--accent)}
 .nav-bar select:hover,.nav-bar input:hover,.nav-bar select:focus,.nav-bar input:focus{
   border-color:var(--accent);
 }
-.nav-bar input[type="text"]{width:160px}
+.nav-bar input[type="text"]{width:180px}
 .nav-bar input[type="text"]::placeholder{color:var(--text-muted)}
 
 .header-right{display:flex;align-items:center;gap:8px}
@@ -91,8 +155,26 @@ a:hover{color:var(--accent)}
 }
 .theme-btn:hover{border-color:var(--accent);color:var(--accent)}
 
+/* === Hero Section for SEO === */
+.hero{
+  max-width:1200px;margin:0 auto;padding:20px 20px 0;
+}
+.hero-text{
+  background:linear-gradient(135deg,rgba(212,168,67,.06),rgba(192,57,43,.04));
+  border:1px solid var(--border);border-radius:12px;
+  padding:24px 28px;margin-bottom:16px;
+}
+.hero-text h1{
+  font-size:26px;font-weight:800;margin-bottom:10px;
+  background:linear-gradient(135deg,var(--gold),var(--red-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-text p{
+  font-size:14px;line-height:1.7;color:var(--text-secondary);max-width:800px;
+}
+
 /* === Ad Banner === */
-.ad-banner-top{max-width:1200px;margin:12px auto 0;padding:0 20px}
+.ad-banner-top{max-width:1200px;margin:0 auto;padding:0 20px 12px}
 .ad-slot{
   background:var(--bg-card);border:1px dashed var(--border);border-radius:8px;
   display:flex;align-items:center;justify-content:center;
@@ -104,7 +186,7 @@ a:hover{color:var(--accent)}
 /* === Main Content === */
 .main{
   max-width:1200px;width:100%;margin:0 auto;
-  padding:16px 20px 130px;
+  padding:0 20px 130px;
   display:flex;gap:16px;
 }
 .content-area{flex:1;min-width:0}
@@ -118,8 +200,8 @@ a:hover{color:var(--accent)}
   cursor:pointer;transition:all .25s;white-space:nowrap;
 }
 .cat-tag:hover,.cat-tag.active{
-  background:linear-gradient(135deg,var(--accent),#ff8c00);
-  color:#000;border-color:transparent;
+  background:linear-gradient(135deg,var(--accent),var(--red));
+  color:#fff;border-color:transparent;
 }
 
 /* === Song List === */
@@ -138,7 +220,7 @@ a:hover{color:var(--accent)}
 }
 .song-item:hover{background:var(--bg-hover);border-color:var(--border)}
 .song-item.playing{
-  background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(255,107,157,.05));
+  background:linear-gradient(135deg,rgba(212,168,67,.1),rgba(192,57,43,.06));
   border-color:var(--accent-dim);
 }
 .song-index{
@@ -157,7 +239,7 @@ a:hover{color:var(--accent)}
 .song-tags{display:flex;gap:4px;margin-top:4px}
 .song-tag-mini{
   font-size:10px;padding:1px 6px;border-radius:3px;
-  background:rgba(37,99,235,.15);color:var(--blue-light);
+  background:rgba(192,57,43,.15);color:var(--red-light);
 }
 .song-duration{font-size:12px;color:var(--text-muted);flex-shrink:0}
 .song-play-btn{
@@ -167,7 +249,7 @@ a:hover{color:var(--accent)}
   font-size:14px;flex-shrink:0;opacity:0;transition:opacity .2s;
 }
 .song-item:hover .song-play-btn{opacity:1}
-.song-item.playing .song-play-btn{opacity:1;background:var(--pink);color:#fff}
+.song-item.playing .song-play-btn{opacity:1;background:var(--red);color:#fff}
 
 /* === Sidebar === */
 .sidebar .ad-slot{min-height:250px;margin-bottom:16px}
@@ -193,14 +275,42 @@ a:hover{color:var(--accent)}
   font-size:11px;font-weight:700;flex-shrink:0;
   background:var(--bg-hover);color:var(--text-muted);
 }
-.hot-rank.top3{background:linear-gradient(135deg,var(--accent),#ff8c00);color:#000}
+.hot-rank.top3{background:linear-gradient(135deg,var(--accent),var(--red));color:#fff}
 .hot-name{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hot-plays{font-size:11px;color:var(--text-muted)}
+
+/* === About Section (SEO) === */
+.about-section{
+  max-width:1200px;margin:0 auto;padding:0 20px 30px;
+}
+.about-content{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:12px;
+  padding:28px;
+}
+.about-content h2{
+  font-size:20px;font-weight:700;margin-bottom:14px;color:var(--accent);
+}
+.about-content h3{
+  font-size:16px;font-weight:600;margin:16px 0 8px;color:var(--gold);
+}
+.about-content p{
+  font-size:14px;line-height:1.8;color:var(--text-secondary);margin-bottom:10px;
+}
+.about-content ul{
+  list-style:none;padding:0;margin-bottom:12px;
+}
+.about-content li{
+  font-size:14px;line-height:1.8;color:var(--text-secondary);
+  padding-left:20px;position:relative;
+}
+.about-content li::before{
+  content:"🎵";position:absolute;left:0;
+}
 
 /* === Player Bar === */
 .player-bar{
   position:fixed;bottom:0;left:0;right:0;
-  background:linear-gradient(180deg,var(--bg-secondary),#080e1c);
+  background:linear-gradient(180deg,var(--bg-secondary),#0e0505);
   border-top:1px solid var(--border);
   padding:0;z-index:200;
   box-shadow:0 -4px 30px rgba(0,0,0,.5);
@@ -210,7 +320,7 @@ a:hover{color:var(--accent)}
   cursor:pointer;position:relative;
 }
 .progress-bar-fill{
-  height:100%;background:linear-gradient(90deg,var(--accent),var(--pink));
+  height:100%;background:linear-gradient(90deg,var(--accent),var(--red-light));
   width:0%;border-radius:0 2px 2px 0;transition:width .3s;
 }
 .progress-bar-wrap:hover{height:6px}
@@ -244,10 +354,10 @@ a:hover{color:var(--accent)}
 .ctrl-btn:hover{color:var(--text-primary);background:var(--bg-hover)}
 .ctrl-btn.play-main{
   width:44px;height:44px;
-  background:linear-gradient(135deg,var(--accent),#ff8c00);
-  color:#000;font-size:20px;
+  background:linear-gradient(135deg,var(--accent),var(--red));
+  color:#fff;font-size:20px;
 }
-.ctrl-btn.play-main:hover{transform:scale(1.08);box-shadow:0 0 16px rgba(255,215,0,.4)}
+.ctrl-btn.play-main:hover{transform:scale(1.08);box-shadow:0 0 16px rgba(212,168,67,.4)}
 
 .player-time{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)}
 .player-extra{display:flex;align-items:center;gap:8px;width:200px;justify-content:flex-end}
@@ -269,6 +379,15 @@ a:hover{color:var(--accent)}
   border-radius:50%;background:var(--accent);cursor:pointer;
 }
 
+/* === Footer === */
+.footer{
+  max-width:1200px;margin:0 auto;padding:20px;
+  border-top:1px solid var(--border);
+  text-align:center;
+}
+.footer p{font-size:12px;color:var(--text-muted);line-height:1.8}
+.footer a{color:var(--text-secondary)}
+
 /* === Responsive === */
 @media(max-width:900px){
   .sidebar{display:none}
@@ -286,22 +405,24 @@ a:hover{color:var(--accent)}
   .ctrl-btn.play-main{width:38px;height:38px}
   .song-duration{display:none}
   .song-tags{display:none}
+  .hero-text h1{font-size:20px}
+  .hero-text p{font-size:13px}
 }
 
 /* === Light Theme === */
 body.light{
-  --bg-primary:#f5f7fa;
+  --bg-primary:#faf7f2;
   --bg-secondary:#fff;
   --bg-card:#fff;
-  --bg-hover:#f0f2f5;
-  --text-primary:#1a1a2e;
-  --text-secondary:#666;
-  --text-muted:#999;
-  --border:#e0e0e0;
+  --bg-hover:#f5f0e8;
+  --text-primary:#2a1a10;
+  --text-secondary:#6b5545;
+  --text-muted:#9a8878;
+  --border:#e0d5c8;
   --shadow:0 4px 24px rgba(0,0,0,.08);
 }
-body.light .header{background:linear-gradient(180deg,#fff,#f5f7fa)}
-body.light .player-bar{background:linear-gradient(180deg,#fff,#f0f2f5)}
+body.light .header{background:linear-gradient(180deg,#fff,#faf7f2)}
+body.light .player-bar{background:linear-gradient(180deg,#fff,#f5f0e8)}
 body.light .ad-slot{background:#fafafa;border-color:#ddd}
 
 /* === Scrollbar === */
@@ -314,17 +435,17 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 .visualizer{display:flex;align-items:flex-end;gap:2px;height:24px;margin-left:8px}
 .vis-bar{
   width:3px;border-radius:1px;
-  background:linear-gradient(to top,var(--accent),var(--pink));
+  background:linear-gradient(to top,var(--accent),var(--red-light));
   transition:height .15s;
 }
 
-/* === Gradient covers === */
-.cover-dj{background:linear-gradient(135deg,#667eea,#764ba2)}
-.cover-pop{background:linear-gradient(135deg,#f093fb,#f5576c)}
-.cover-emo{background:linear-gradient(135deg,#4facfe,#00f2fe)}
-.cover-ai{background:linear-gradient(135deg,#43e97b,#38f9d7)}
-.cover-cute{background:linear-gradient(135deg,#ffd700,#ff6b9d)}
-.cover-trad{background:linear-gradient(135deg,#c0392b,#d4a843)}
+/* === Cover Gradients === */
+.cover-traditional{background:linear-gradient(135deg,#c0392b,#d4a843)}
+.cover-modern{background:linear-gradient(135deg,#e74c3c,#f39c12)}
+.cover-fusion{background:linear-gradient(135deg,#8e44ad,#e74c3c)}
+.cover-cinematic{background:linear-gradient(135deg,#2c3e50,#c0392b)}
+.cover-festival{background:linear-gradient(135deg,#d4a843,#e74c3c)}
+.cover-covers{background:linear-gradient(135deg,#e67e22,#c0392b)}
 </style>
 </head>
 <body>
@@ -333,38 +454,51 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 <header class="header">
   <div class="header-inner">
     <div class="logo">
-      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="url(#g1)"/><path d="M14 16c0-3.3 2.7-6 6-6s6 2.7 6 6v4c0 3.3-2.7 6-6 6s-6-2.7-6-6v-4z" fill="#0a1628" opacity=".3"/><circle cx="20" cy="18" r="3" fill="#0a1628"/><path d="M17 25c0 1.7 1.3 3 3 3s3-1.3 3-3" stroke="#0a1628" stroke-width="1.5" fill="none"/><defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#ffd700"/><stop offset="1" stop-color="#ff6b9d"/></linearGradient></defs></svg>
-      萌宠音坊
+      <svg viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="18" fill="url(#g1)"/>
+        <path d="M20 8 L22 18 L26 18 L22 22 L24 32 L20 26 L16 32 L18 22 L14 18 L18 18 Z" fill="#1a0a0a" opacity=".4"/>
+        <circle cx="20" cy="20" r="4" fill="#1a0a0a" opacity=".3"/>
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#d4a843"/><stop offset="1" stop-color="#c0392b"/></linearGradient></defs>
+      </svg>
+      Suona Vibes
     </div>
     <div class="nav-bar">
-      <input type="text" id="searchInput" placeholder="🔍 搜索歌曲..." oninput="filterSongs()">
+      <input type="text" id="searchInput" placeholder="🔍 Search suona music..." oninput="filterSongs()">
       <select id="categorySelect" onchange="filterByCategory()">
-        <option value="all">🎵 全部分类</option>
-        <option value="dj">🔊 DJ舞曲</option>
-        <option value="pop">🎤 流行热歌</option>
-        <option value="emotional">💔 情感伤感情歌</option>
-        <option value="ai">🤖 AI创作</option>
-        <option value="cute">🐾 萌宠BGM</option>
-        <option value="traditional">🏮 传统文化</option>
+        <option value="all">🎵 All Categories</option>
+        <option value="traditional">🏯 Traditional Suona</option>
+        <option value="modern">🎸 Modern Suona</option>
+        <option value="fusion">🌊 Suona Fusion</option>
+        <option value="cinematic">🎬 Cinematic Suona</option>
+        <option value="festival">🎊 Festival & Celebration</option>
+        <option value="covers">🎤 Suona Covers</option>
       </select>
       <select id="sortSelect" onchange="filterSongs()">
-        <option value="hot">🔥 最热</option>
-        <option value="new">🕐 最新</option>
-        <option value="name">🔤 按名称</option>
+        <option value="hot">🔥 Most Popular</option>
+        <option value="new">🕐 Newest</option>
+        <option value="name">🔤 By Name</option>
       </select>
     </div>
     <div class="header-right">
-      <button class="theme-btn" onclick="toggleTheme()" title="切换主题">🌙</button>
+      <button class="theme-btn" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
     </div>
   </div>
 </header>
+
+<!-- Hero (SEO content) -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Free Suona Music Online — The Soul of Chinese Traditional Music</h1>
+    <p>Welcome to <strong>Suona Vibes</strong>, the world's first dedicated online suona music player. The suona (唢呐) is China's most iconic double-reed wind instrument, with a history spanning over 2,000 years. Its bright, expressive tone has captivated audiences from ancient village festivals to modern concert halls worldwide. Here you can stream traditional suona melodies, modern suona fusion, cinematic suona scores, and creative suona covers — all completely free.</p>
+  </div>
+</div>
 
 <!-- Ad Banner Top -->
 <div class="ad-banner-top">
   <div class="ad-slot" id="ad-top">
     <span class="ad-slot-label">AD</span>
-    <!-- Google AdSense 代码放置于此 -->
-    广告位 · 728×90
+    <!-- Google AdSense: 728x90 Leaderboard -->
+    Advertisement · 728×90
   </div>
 </div>
 
@@ -372,16 +506,16 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 <div class="main">
   <div class="content-area">
     <div class="category-bar" id="categoryBar">
-      <div class="cat-tag active" onclick="selectCat(this,'all')">🎵 全部</div>
-      <div class="cat-tag" onclick="selectCat(this,'dj')">🔊 DJ舞曲</div>
-      <div class="cat-tag" onclick="selectCat(this,'pop')">🎤 流行热歌</div>
-      <div class="cat-tag" onclick="selectCat(this,'emotional')">💔 伤感</div>
-      <div class="cat-tag" onclick="selectCat(this,'ai')">🤖 AI创作</div>
-      <div class="cat-tag" onclick="selectCat(this,'cute')">🐾 萌宠</div>
-      <div class="cat-tag" onclick="selectCat(this,'traditional')">🏮 传统</div>
+      <div class="cat-tag active" onclick="selectCat(this,'all')">🎵 All</div>
+      <div class="cat-tag" onclick="selectCat(this,'traditional')">🏯 Traditional</div>
+      <div class="cat-tag" onclick="selectCat(this,'modern')">🎸 Modern</div>
+      <div class="cat-tag" onclick="selectCat(this,'fusion')">🌊 Fusion</div>
+      <div class="cat-tag" onclick="selectCat(this,'cinematic')">🎬 Cinematic</div>
+      <div class="cat-tag" onclick="selectCat(this,'festival')">🎊 Festival</div>
+      <div class="cat-tag" onclick="selectCat(this,'covers')">🎤 Covers</div>
     </div>
 
-    <div class="section-title"><span class="icon">🎵</span> 歌曲列表 <div class="visualizer" id="visualizer"></div></div>
+    <div class="section-title"><span class="icon">🎵</span> Suona Playlist <div class="visualizer" id="visualizer"></div></div>
     <div class="song-list" id="songList"></div>
   </div>
 
@@ -389,21 +523,68 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
   <div class="sidebar">
     <div class="ad-slot" id="ad-sidebar">
       <span class="ad-slot-label">AD</span>
-      <!-- Google AdSense 代码放置于此 -->
-      广告位 · 300×250
+      <!-- Google AdSense: 300x250 Medium Rectangle -->
+      Advertisement · 300×250
     </div>
     <div class="sidebar-card">
-      <h3><span class="icon">🔥</span> 热播榜</h3>
+      <h3><span class="icon">🔥</span> Most Played</h3>
       <div class="hot-list" id="hotList"></div>
     </div>
     <div class="sidebar-card">
-      <h3><span class="icon">🕐</span> 最近播放</h3>
+      <h3><span class="icon">🕐</span> Recently Played</h3>
       <div class="hot-list" id="recentList">
-        <div style="color:var(--text-muted);font-size:13px;padding:8px 0">还没有播放记录</div>
+        <div style="color:var(--text-muted);font-size:13px;padding:8px 0">No playback history yet</div>
       </div>
+    </div>
+    <div class="sidebar-card">
+      <h3><span class="icon">📖</span> About the Suona</h3>
+      <p style="font-size:13px;line-height:1.7;color:var(--text-secondary)">The suona is a Chinese double-reed instrument, also known as the "Chinese trumpet." Used for over 2,000 years in folk music, military processions, and celebrations, it produces a uniquely bright and powerful sound. In recent years, suona has gained global attention through viral performances and fusion with modern genres.</p>
     </div>
   </div>
 </div>
+
+<!-- About Section (SEO rich content) -->
+<section class="about-section">
+  <div class="about-content">
+    <h2>The Complete Guide to Suona Music</h2>
+    
+    <h3>What Is the Suona?</h3>
+    <p>The suona (唢呐, suǒnà) is a traditional Chinese double-reed wind instrument that has been played for more than two millennia. Often compared to the Western oboe or trumpet due to its bright, penetrating tone, the suona is one of the most recognizable instruments in Chinese folk music. It features a conical wooden body, a metal bell at the end, and a double reed made from copper or silver wire wrapped with reed material.</p>
+    
+    <h3>A Brief History of the Suona</h3>
+    <p>The suona's origins can be traced back to ancient Persia and Central Asia, where similar instruments were used in military and ceremonial contexts. The instrument traveled along the Silk Road and was adopted into Chinese musical traditions during the Han Dynasty (206 BCE – 220 CE). By the Ming and Qing Dynasties, the suona had become a staple of Chinese folk ensembles, opera accompaniment, and outdoor celebrations.</p>
+    
+    <h3>Why Suona Music Is Gaining Global Popularity</h3>
+    <p>In recent years, suona music has experienced a remarkable surge in international popularity. Several factors contribute to this trend:</p>
+    <ul>
+      <li><strong>Viral performances</strong> — Suona players on YouTube and TikTok have accumulated millions of views, introducing the instrument to global audiences</li>
+      <li><strong>Cinematic use</strong> — Film composers increasingly incorporate suona into epic soundtracks, creating a distinctive "Eastern epic" sound</li>
+      <li><strong>Cross-genre fusion</strong> — Modern musicians blend suona with jazz, electronic, rock, and pop, creating exciting new sonic landscapes</li>
+      <li><strong>Cultural curiosity</strong> — As interest in world music grows, listeners are seeking out unique instruments like the suona</li>
+      <li><strong>Educational content</strong> — Online tutorials and documentaries make suona more accessible to aspiring musicians worldwide</li>
+    </ul>
+    
+    <h3>Types of Suona Music on This Platform</h3>
+    <p>Suona Vibes curates six distinct categories of suona music to help you explore the full range of this incredible instrument:</p>
+    <ul>
+      <li><strong>Traditional Suona</strong> — Classic folk melodies and regional styles from across China, including the famous "Bai Niao Chao Feng" (Phoenix Greeting the Birds)</li>
+      <li><strong>Modern Suona</strong> — Contemporary arrangements that showcase the suona in new harmonic and rhythmic contexts</li>
+      <li><strong>Suona Fusion</strong> — Innovative blends of suona with electronic, jazz, hip-hop, and world music genres</li>
+      <li><strong>Cinematic Suona</strong> — Epic, film-score inspired compositions featuring the suona as the lead voice</li>
+      <li><strong>Festival & Celebration</strong> — Joyous, energetic suona music traditionally performed at weddings, New Year celebrations, and harvest festivals</li>
+      <li><strong>Suona Covers</strong> — Popular songs and melodies from around the world reimagined through the suona's unique voice</li>
+    </ul>
+    
+    <h3>How to Listen</h3>
+    <p>Simply browse our curated playlist above, use the search bar to find specific songs, or filter by category. Click any track to start playing instantly — no registration or download required. Our player supports background listening, shuffle mode, repeat, and volume control for the best experience.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Suona Vibes. Free online suona music player. All music is AI-generated original content.</p>
+  <p><a href="https://music-player-novelverse.vercel.app/">Suona Music Online</a> · <a href="#">About</a> · <a href="#">Contact</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
+</footer>
 
 <!-- Player Bar -->
 <div class="player-bar">
@@ -414,26 +595,26 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
     <div class="player-song">
       <div class="player-cover" id="playerCover">🎵</div>
       <div class="player-song-info">
-        <div class="player-song-name" id="playerName">未在播放</div>
-        <div class="player-song-artist" id="playerArtist">选择歌曲开始播放</div>
+        <div class="player-song-name" id="playerName">Not Playing</div>
+        <div class="player-song-artist" id="playerArtist">Select a track to begin</div>
       </div>
     </div>
     <div class="player-controls">
       <div class="player-time">
         <span id="currentTime">0:00</span>
       </div>
-      <button class="ctrl-btn" onclick="prevSong()" title="上一首">⏮</button>
-      <button class="ctrl-btn play-main" id="playBtn" onclick="togglePlay()" title="播放/暂停">▶</button>
-      <button class="ctrl-btn" onclick="nextSong()" title="下一首">⏭</button>
+      <button class="ctrl-btn" onclick="prevSong()" title="Previous">⏮</button>
+      <button class="ctrl-btn play-main" id="playBtn" onclick="togglePlay()" title="Play/Pause">▶</button>
+      <button class="ctrl-btn" onclick="nextSong()" title="Next">⏭</button>
       <div class="player-time">
         <span id="totalTime">0:00</span>
       </div>
     </div>
     <div class="player-extra">
-      <button class="extra-btn" id="repeatBtn" onclick="toggleRepeat()" title="循环模式">🔁</button>
-      <button class="extra-btn" id="shuffleBtn" onclick="toggleShuffle()" title="随机播放">🔀</button>
+      <button class="extra-btn" id="repeatBtn" onclick="toggleRepeat()" title="Repeat Mode">🔁</button>
+      <button class="extra-btn" id="shuffleBtn" onclick="toggleShuffle()" title="Shuffle">🔀</button>
       <div class="volume-wrap">
-        <button class="extra-btn" onclick="toggleMute()" title="静音">🔊</button>
+        <button class="extra-btn" onclick="toggleMute()" title="Mute">🔊</button>
         <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="80" oninput="setVolume(this.value)">
       </div>
     </div>
@@ -445,31 +626,31 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 
 <script>
 // === Song Data ===
-const coverClasses = {dj:'cover-dj',pop:'cover-pop',emotional:'cover-emo',ai:'cover-ai',cute:'cover-cute',traditional:'cover-trad'};
+const coverClasses = {traditional:'cover-traditional',modern:'cover-modern',fusion:'cover-fusion',cinematic:'cover-cinematic',festival:'cover-festival',covers:'cover-covers'};
 
 const R2_BASE = 'https://pub-a6fb0a3ecc094a51a5555ca46fada2da.r2.dev';
 const songs = [
-  {id:1,name:"电子夜曲",artist:"萌宠音坊",category:"dj",tags:["DJ","电音","嗨曲"],duration:"4:32",plays:128500,emoji:"🌃",src:R2_BASE+"/%E7%94%B5%E5%AD%90%E5%A4%9C%E6%9B%B2.mp3"},
-  {id:2,name:"午夜DJ",artist:"萌宠音坊",category:"dj",tags:["DJ","电音","嗨曲"],duration:"4:32",plays:128500,emoji:"🌃"},
-  {id:3,name:"没有钱你会爱我吗",artist:"萌宠音坊",category:"dj",tags:["DJ","现实","洗脑"],duration:"3:58",plays:256800,emoji:"💰"},
-  {id:4,name:"伤不起",artist:"萌宠音坊",category:"emotional",tags:["伤感","女声","电音"],duration:"4:15",plays:198200,emoji:"💔"},
-  {id:5,name:"红尘情歌",artist:"萌宠音坊",category:"emotional",tags:["古风","情歌","对唱"],duration:"4:02",plays:312600,emoji:"❤️"},
-  {id:6,name:"想你的夜",artist:"萌宠音坊",category:"emotional",tags:["思念","深夜","抒情"],duration:"3:45",plays:167400,emoji:"🌙"},
-  {id:7,name:"萌宠乐园",artist:"AI创作",category:"cute",tags:["萌宠","可爱","BGM"],duration:"3:20",plays:89300,emoji:"🐱"},
-  {id:8,name:"醉在DJ里",artist:"萌宠音坊",category:"dj",tags:["DJ","派对","炸裂"],duration:"4:48",plays:145600,emoji:"🎉"},
-  {id:9,name:"小苹果嗨起来",artist:"萌宠音坊",category:"pop",tags:["洗脑","欢快","全民"],duration:"3:35",plays:423100,emoji:"🍎"},
-  {id:10,name:"寂寞沙洲",artist:"萌宠音坊",category:"emotional",tags:["寂寞","漂泊","氛围"],duration:"4:22",plays:134500,emoji:"🏝️"},
-  {id:11,name:"爱情买卖",artist:"萌宠音坊",category:"dj",tags:["DJ","犀利","舞曲"],duration:"3:55",plays:287900,emoji:"💕"},
-  {id:12,name:"增广贤文说",artist:"AI创作",category:"traditional",tags:["传统文化","国学","说唱"],duration:"4:10",plays:76500,emoji:"📜"},
-  {id:13,name:"AI梦境曲",artist:"AI创作",category:"ai",tags:["AI","电子","梦幻"],duration:"5:01",plays:65200,emoji:"🤖"},
-  {id:14,name:"伤心的站台",artist:"萌宠音坊",category:"emotional",tags:["离别","站台","伤感"],duration:"4:18",plays:178300,emoji:"🚉"},
-  {id:15,name:"招财进宝",artist:"AI创作",category:"traditional",tags:["财神","喜庆","传统"],duration:"3:42",plays:234100,emoji:"🧧"},
-  {id:16,name:"萌宠进行曲",artist:"AI创作",category:"cute",tags:["萌宠","进行曲","搞笑"],duration:"3:15",plays:112700,emoji:"🐶"},
-  {id:17,name:"商业风云",artist:"萌宠音坊",category:"pop",tags:["商业","大气","励志"],duration:"4:30",plays:98600,emoji:"📈"},
-  {id:18,name:"月下思",artist:"萌宠音坊",category:"traditional",tags:["古风","思念","唯美"],duration:"4:55",plays:87400,emoji:"🌕"},
-  {id:19,name:"电音萌宠",artist:"AI创作",category:"ai",tags:["AI","电音","萌宠"],duration:"3:28",plays:54800,emoji:"🎧"},
-  {id:20,name:"心动信号",artist:"萌宠音坊",category:"pop",tags:["甜蜜","恋爱","轻快"],duration:"3:50",plays:201500,emoji:"💓"},
-  {id:21,name:"午夜摇篮曲",artist:"AI创作",category:"cute",tags:["萌宠","摇篮曲","治愈"],duration:"4:05",plays:73200,emoji:"🌟"}
+  {id:1,name:"Phoenix Rising (百鸟朝凤)",artist:"Suona Master Ensemble",category:"traditional",tags:["Classic","Masterpiece","Traditional"],duration:"5:42",plays:328500,emoji:"🐦",src:""},
+  {id:2,name:"Spring Morning in the Village",artist:"Suona Master Ensemble",category:"traditional",tags:["Folk","Pastoral","Gentle"],duration:"4:18",plays:256200,emoji:"🌸",src:""},
+  {id:3,name:"Dragon Dance Fury",artist:"Suona Vibes",category:"festival",tags:["Festival","Energetic","Celebration"],duration:"3:55",plays:412800,emoji:"🐉",src:""},
+  {id:4,name:"Desert Wind Serenade",artist:"Silk Road Collective",category:"fusion",tags:["Fusion","World Music","Exotic"],duration:"4:32",plays:198600,emoji:"🏜️",src:""},
+  {id:5,name:"Neon Dynasty",artist:"Bass & Reed",category:"modern",tags:["Modern","Electronic","Bass"],duration:"4:05",plays:287400,emoji:"⚡",src:""},
+  {id:6,name:"Battle of Red Cliffs",artist:"Cinematic East",category:"cinematic",tags:["Epic","Film Score","Battle"],duration:"5:15",plays:356100,emoji:"⚔️",src:""},
+  {id:7,name:"Wedding Procession",artist:"Suona Master Ensemble",category:"festival",tags:["Wedding","Joyful","Ceremony"],duration:"3:48",plays:178900,emoji:"🎊",src:""},
+  {id:8,name:"Suona Dreams",artist:"Bass & Reed",category:"fusion",tags:["Dreamy","Lo-fi","Chill"],duration:"4:22",plays:145200,emoji:"💭",src:""},
+  {id:9,name:"Moonlight Over the Yellow River",artist:"Suona Master Ensemble",category:"traditional",tags:["Classic","Moonlight","Poetic"],duration:"5:30",plays:234700,emoji:"🌕",src:""},
+  {id:10,name:"Electric Suona",artist:"Neon Reed",category:"modern",tags:["Electric","EDM","Drop"],duration:"3:38",plays:312500,emoji:"🎸",src:""},
+  {id:11,name:"Autumn Geese Returning Home",artist:"Suona Master Ensemble",category:"traditional",tags:["Nostalgic","Autumn","Melancholy"],duration:"4:45",plays:167300,emoji:"🍂",src:""},
+  {id:12,name:"Great Wall Epic",artist:"Cinematic East",category:"cinematic",tags:["Epic","Orchestral","Majestic"],duration:"6:12",plays:289400,emoji:"🏯",src:""},
+  {id:13,name:"Happy New Year (春节序曲)",artist:"Suona Vibes",category:"festival",tags:["New Year","Festive","Traditional"],duration:"4:08",plays:456200,emoji:"🧧",src:""},
+  {id:14,name:"Suona & Jazz Cafe",artist:"The Reed Quartet",category:"fusion",tags:["Jazz","Cafe","Smooth"],duration:"5:20",plays:134800,emoji:"🎷",src:""},
+  {id:15,name:"Desperado (Suona Version)",artist:"Suona Covers",category:"covers",tags:["Cover","Western","Emotional"],duration:"3:52",plays:198700,emoji:"🤠",src:""},
+  {id:16,name:"Temple Bell Awakening",artist:"Silk Road Collective",category:"cinematic",tags:["Ambient","Meditation","Ancient"],duration:"5:48",plays:112600,emoji:"🔔",src:""},
+  {id:17,name:"Suona Goes Viral (TikTok Hit)",artist:"Neon Reed",category:"covers",tags:["Viral","Pop","Fun"],duration:"3:15",plays:523800,emoji:"📱",src:""},
+  {id:18,name:"Harvest Festival Dance",artist:"Suona Vibes",category:"festival",tags:["Harvest","Dance","Folk"],duration:"4:02",plays:189500,emoji:"🌾",src:""},
+  {id:19,name:"Cyberpunk Suzhou",artist:"Bass & Reed",category:"modern",tags:["Cyberpunk","Synth","Future"],duration:"4:38",plays:267300,emoji:"🌃",src:""},
+  {id:20,name:"Shape of You (Suona Remix)",artist:"Suona Covers",category:"covers",tags:["Cover","Pop","Remix"],duration:"3:42",plays:378900,emoji:"🎤",src:""},
+  {id:21,name:"Mountain Echo at Dawn",artist:"Suona Master Ensemble",category:"traditional",tags:["Mountain","Echo","Serene"],duration:"5:05",plays:145800,emoji:"🏔️",src:""}
 ];
 
 // === State ===
@@ -506,7 +687,7 @@ function renderHotList() {
     <div class="hot-item" onclick="playSong(${s.id})">
       <div class="hot-rank ${i<3?'top3':''}">${i+1}</div>
       <div class="hot-name">${s.emoji} ${s.name}</div>
-      <div class="hot-plays">${(s.plays/10000).toFixed(1)}万</div>
+      <div class="hot-plays">${(s.plays/1000).toFixed(0)}K</div>
     </div>
   `).join('');
 }
@@ -514,7 +695,7 @@ function renderHotList() {
 function renderRecent() {
   const c = document.getElementById('recentList');
   if (!recentPlayed.length) {
-    c.innerHTML = '<div style="color:var(--text-muted);font-size:13px;padding:8px 0">还没有播放记录</div>';
+    c.innerHTML = '<div style="color:var(--text-muted);font-size:13px;padding:8px 0">No playback history yet</div>';
     return;
   }
   c.innerHTML = recentPlayed.map(s => `
@@ -590,7 +771,7 @@ function playSong(id) {
   document.getElementById('playBtn').innerHTML = '⏸';
   document.getElementById('totalTime').textContent = song.duration;
   renderSongList(filteredSongs);
-  document.title = '♫ '+song.name+' - '+song.artist+' | 萌宠音坊';
+  document.title = '♫ '+song.name+' - '+song.artist+' | Suona Vibes';
 }
 
 // Audio event listeners
