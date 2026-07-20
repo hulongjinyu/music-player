@@ -584,6 +584,7 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 <footer class="footer">
   <p>© 2026 Suona Vibes. Free online suona music player. All music is AI-generated original content.</p>
   <p><a href="https://music-player-novelverse.vercel.app/">Suona Music Online</a> · <a href="#">About</a> · <a href="#">Contact</a> · <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></p>
+  <p style="margin-top:8px"><a href="javascript:void(0)" onclick="openAdmin()" style="color:var(--text-muted);font-size:11px;cursor:pointer">⚙️</a></p>
 </footer>
 
 <!-- Player Bar -->
@@ -625,11 +626,15 @@ body.light .ad-slot{background:#fafafa;border-color:#ddd}
 <audio id="audioPlayer" preload="auto"></audio>
 
 <script>
+// === Worker API (deploy Worker, then replace with your Worker URL) ===
+const WORKER_API = 'https://suona-vibes-api.8f75d1c8fc9c26fb2580647b3e917b0c.workers.dev';
+
 // === Song Data ===
 const coverClasses = {traditional:'cover-traditional',modern:'cover-modern',fusion:'cover-fusion',cinematic:'cover-cinematic',festival:'cover-festival',covers:'cover-covers'};
-
 const R2_BASE = 'https://pub-a6fb0a3ecc094a51a5555ca46fada2da.r2.dev';
-const songs = [
+
+// Fallback songs (used if Worker API is unavailable)
+const fallbackSongs = [
   {id:1,name:"Phoenix Rising (百鸟争鸣曲)",artist:"Suona Master Ensemble",category:"traditional",tags:["Classic","Masterpiece","Traditional"],duration:"3:47",plays:328500,emoji:"🐦",src:R2_BASE+"/%E7%99%BE%E9%B8%9F%E4%BA%89%E9%B8%A3%E6%9B%B2.mp3"},
   {id:2,name:"Mountain Wind at Dawn (寒源风吟)",artist:"Suona Master Ensemble",category:"traditional",tags:["Folk","Mountain","Serene"],duration:"8:15",plays:256200,emoji:"🏔️",src:R2_BASE+"/%E5%AF%92%E6%BA%90%E9%A3%8E%E5%90%9F.mp3"},
   {id:3,name:"Dragon Dance Fury",artist:"Suona Vibes",category:"festival",tags:["Festival","Energetic","Celebration"],duration:"3:55",plays:412800,emoji:"🐉",src:""},
@@ -654,13 +659,16 @@ const songs = [
   {id:22,name:"Drums of Celebration (鼓乐迎喜)",artist:"Suona Vibes",category:"festival",tags:["Drums","Celebration","Festive"],duration:"5:57",plays:189500,emoji:"🥁",src:R2_BASE+"/%E9%BC%93%E4%B9%90%E8%BF%8E%E5%96%9C.mp3"}
 ];
 
+// Active songs list (will be loaded from Worker API)
+let songs = [...fallbackSongs];
+
 // === State ===
 let currentSong = null;
 let currentIndex = -1;
 let isPlaying = false;
 let repeatMode = 0;
 let isShuffle = false;
-let filteredSongs = [...songs];
+let filteredSongs = [];
 let recentPlayed = [];
 const audio = document.getElementById('audioPlayer');
 
@@ -896,9 +904,32 @@ document.addEventListener('keydown', e => {
   if (e.code==='ArrowRight') nextSong();
 });
 
+// === Dynamic Song Loading ===
+async function loadSongsFromAPI() {
+  try {
+    const res = await fetch(WORKER_API + '/api/songs');
+    if (!res.ok) throw new Error('API unavailable');
+    const apiSongs = await res.json();
+    if (apiSongs && apiSongs.length > 0) {
+      songs = apiSongs;
+    } else {
+      songs = [...fallbackSongs];
+    }
+  } catch (e) {
+    // Fallback to hardcoded songs if API fails
+    songs = [...fallbackSongs];
+  }
+  filteredSongs = [...songs];
+  filterSongs();
+  renderHotList();
+}
+
+function openAdmin() {
+  window.open(WORKER_API + '/admin', '_blank');
+}
+
 // === Init ===
-filterSongs();
-renderHotList();
+loadSongsFromAPI();
 initVisualizer();
 </script>
 </body>
